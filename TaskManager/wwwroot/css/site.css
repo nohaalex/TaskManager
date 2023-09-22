@@ -1,0 +1,85 @@
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
+  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+    margin-bottom: 60px;
+   
+}
+/* Sidebar Styles */
+/* Sidebar Styles */
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 240px; /* Adjust the width as needed */
+    padding-top: 20px;
+    overflow-y: auto;
+    background-image: linear-gradient(to left,#000000,#5b8944);
+    border-right: 1px solid #dee2e6; /* Optional: Add a border to separate the sidebar from the content */
+}
+
+    .sidebar ul.nav {
+        padding-left: 20px;
+    }
+
+    .sidebar .nav-link {
+        padding: 8px 20px;
+        color: #333; /* Link text color */
+        text-decoration: none;
+        display: block;
+        transition: background-color 0.3s ease; /* Add a smooth transition effect */
+    }
+
+        .sidebar .nav-link:hover {
+            background-color: #000000; /* Hover background color */
+            color: #f8f9fa; /* Hover link text color */
+        }
+
+        .sidebar .nav-link.active {
+            background-color: #007bff; /* Active background color */
+            color: #fff; /* Active link text color */
+        }
+
+/* Adjust main content to account for sidebar width */
+.main-content {
+    margin-left: 240px; /* Sidebar width */
+    padding: 15px; /* Optional: Add padding to the main content */
+}
+
+/* Optional: Style for footer */
+.footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #5b8944;
+    padding: 10px;
+    border-top: 1px solid #dee2e6;
+}
+.anchor {
+    height: 50px;
+    width: 50px;
+}
+
+.taskpage-container{
+  
+   border-radius:25px;
+   box-shadow:25px 30px 35px 10px black;
+}

@@ -1,0 +1,40 @@
+﻿@model IEnumerable<TaskManager.Models.TaskDetails>;
+
+
+
+    <h1 class="taskheading text-success text-center">YOUR TASKS</h1>
+<hr>
+@if (Model != null)
+{
+    <table class="table table-bordered">
+
+
+        <tr>
+            <th>Task ID</th>
+
+            <th>Task Name</th>
+            <th>Task Description</th>
+            <th>Delete Task</th>
+        </tr>
+        @foreach (var i in Model)
+        {
+            <tr>
+                <td>@i.TaskId</td>
+                <td> @i.TaskName</td>
+
+                <td> @i.TaskDescription</td>
+                
+                <td>
+
+                    <form asp-action="TaskList" asp-controller="Home" method="post">
+                        <input hidden name="TaskId" value="@i.TaskId" />
+                        <button type="submit" class="btn btn-success">Delete</button>
+                    </form>
+                </td>
+            </tr>
+        }
+    </table>
+}
+
+
+

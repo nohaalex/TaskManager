@@ -1,0 +1,46 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+@model TaskManager.Models.TaskDetails;
+
+<div class="text-center">
+
+    <h1 class="TaskPage text-success text-center"> ADD YOUR TASK HERE!! </h1>
+</div>
+
+<div class="taskpage-container h-100 w-50 bg-success mx-auto">
+    <br />
+    <form asp-controller="Home" asp-action="TaskPage" method="post">
+        <fieldset>
+            <legend class="text-light fs-4 text-center">ADD TASK</legend>
+
+            <div class="form-floating col-6 mx-auto">
+                <input asp-for="TaskName" class="form-control col-6" id="TaskName" />
+                <label asp-for="TaskName" class="form-label"></label>
+                <span asp-validation-for="TaskName" class="text-danger"></span>
+            </div>
+            <br />
+
+            <div class="form-floating col-6 mx-auto">
+               
+                <textarea asp-for="TaskDescription" rows="3" cols="39" placeholder="Enter Task Description"></textarea>
+                <span asp-validation-for="TaskDescription" class="text-danger"></span>
+            </div>
+            <br />
+
+
+            <div class="submit-button text-center">
+                <button type="submit" class="btn btn-primary text-light btn-outline-dark">Submit</button>
+            </div>
+            
+            
+        </fieldset>
+        <br />
+    </form>
+</div>
+
+@section Scripts
+    {
+    @await Html.PartialAsync("/Views/Shared/_ValidationScriptsPartial.cshtml")
+}
